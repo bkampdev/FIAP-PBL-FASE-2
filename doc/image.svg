@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="510" height="306" preserveAspectRatio="xMinYMin meet" viewBox="0 0 510 306" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="510" height="306"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-306)" style="clip-path: url(#clip)">
+		<g transform="">
+			<g transform=" matrix(1,0,0,1,0,20)">
+				<rect x="0" y="0" width="510" height="286" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<text x="10" y="266" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,532) scale(1,-1)">F</text>
+				<path d="M 24,270 L 402,270 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="412" y="266" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,532) scale(1,-1)">Bloqueado</text>
+				<text x="10" y="221" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,442) scale(1,-1)">F</text>
+				<path d="M 24,225 L 60,225 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 60 216 L 60 234 L 80 225 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<circle cx="83" cy="225" r="3" style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<text x="60" y="239" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,478) scale(1,-1)">NOT</text>
+				<path d="M 86,225 L 320,225 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 320,225 L 320,215 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 320,215 L 342,215 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="10" y="191" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,382) scale(1,-1)">E</text>
+				<path d="M 24,195 L 192,195 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="10" y="151" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,302) scale(1,-1)">A</text>
+				<text x="10" y="131" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,262) scale(1,-1)">P</text>
+				<path d="M 24,155 L 82,155 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 24,135 L 82,135 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 90 127 L 90 163 L 108 163 C 138 163 138 127 108 127 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<path d="M 82,135 L 90,135 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 82,155 L 90,155 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="100" y="142" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,284) scale(1,-1)">AND</text>
+				<path d="M 131,145 L 170,145 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 170,145 L 170,175 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 170,175 L 192,175 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 200 167 C 212 185 212 185 200 203 C 225 203 238 196 247 185 C 238 174 225 167 200 167 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<path d="M 192,175 L 206,175 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 192,195 L 206,195 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="215" y="182" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,364) scale(1,-1)">OR</text>
+				<path d="M 247,185 L 320,185 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 320,185 L 320,195 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 320,195 L 342,195 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 350 187 L 350 223 L 368 223 C 398 223 398 187 368 187 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<path d="M 342,195 L 350,195 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 342,215 L 350,215 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="360" y="202" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,404) scale(1,-1)">AND</text>
+				<path d="M 391,205 L 402,205 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="412" y="201" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,402) scale(1,-1)">Autorizado</text>
+				<path d="M 10,118 L 500,118 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
+				<text x="10" y="92" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,184) scale(1,-1)">F</text>
+				<path d="M 24,95 L 60,95 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 60 86 L 60 104 L 80 95 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<circle cx="83" cy="95" r="3" style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<text x="60" y="109" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,218) scale(1,-1)">NOT</text>
+				<path d="M 86,95 L 320,95 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 320,95 L 320,77 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 320,77 L 342,77 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="10" y="62" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,124) scale(1,-1)">E</text>
+				<path d="M 24,65 L 60,65 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 60 56 L 60 74 L 80 65 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<circle cx="83" cy="65" r="3" style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<text x="60" y="79" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,158) scale(1,-1)">NOT</text>
+				<path d="M 86,65 L 342,65 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="10" y="32" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,64) scale(1,-1)">A</text>
+				<path d="M 24,35 L 60,35 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 60 26 L 60 44 L 80 35 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<circle cx="83" cy="35" r="3" style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<text x="60" y="49" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,98) scale(1,-1)">NOT</text>
+				<path d="M 86,35 L 160,35 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 160,35 L 160,30 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 160,30 L 192,30 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="10" y="2" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,4) scale(1,-1)">P</text>
+				<path d="M 24,5 L 60,5 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 60 -4 L 60 14 L 80 5 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<circle cx="83" cy="5" r="3" style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<text x="60" y="19" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,38) scale(1,-1)">NOT</text>
+				<path d="M 86,5 L 160,5 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 160,5 L 160,10 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 160,10 L 192,10 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 200 2 C 212 20 212 20 200 38 C 225 38 238 31 247 20 C 238 9 225 2 200 2 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<path d="M 192,10 L 206,10 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 192,30 L 206,30 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="215" y="17" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,34) scale(1,-1)">OR</text>
+				<path d="M 247,20 L 320,20 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 320,20 L 320,53 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 320,53 L 342,53 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 350 47 L 350 83 L 368 83 C 398 83 398 47 368 47 Z " style="stroke: rgb(25%,25%,25%); stroke-linecap: butt; stroke-width: 1.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+				<path d="M 342,53 L 350,53 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 342,65 L 350,65 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<path d="M 342,77 L 350,77 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="360" y="62" style="font-family: Times-Roman; font-size: 8.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,124) scale(1,-1)">AND</text>
+				<path d="M 391,65 L 402,65 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
+				<text x="412" y="61" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,122) scale(1,-1)">Adiado</text>
+			</g>
+		</g>
+	</g>
+</svg>

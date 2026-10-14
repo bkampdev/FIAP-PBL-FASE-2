@@ -25,7 +25,7 @@ class TestEstruturas(unittest.TestCase):
                 nome_modulo=nome,
                 prioridade_pouso=1,
                 nivel_combustivel=50,
-                massa=1000,
+                massa=10,
                 criticidade_carga="Baixa",
                 integridade_sensores="Operacional",
                 horario_estimado_chegada=datetime(2026, 10, 14, 10, 0)
@@ -70,7 +70,7 @@ class TestEstruturas(unittest.TestCase):
                 nome_modulo=nome,
                 prioridade_pouso=1,
                 nivel_combustivel=50,
-                massa=1000,
+                massa=10,
                 criticidade_carga="Baixa",
                 integridade_sensores="Operacional",
                 horario_estimado_chegada=datetime(2026, 10, 14, 10, 0)

@@ -15,7 +15,7 @@ class TestDecisoesPouso(unittest.TestCase):
             nome_modulo="Modulo Teste",
             prioridade_pouso=1,
             nivel_combustivel=50,
-            massa=1000,
+            massa=10,
             criticidade_carga="Baixa",
             integridade_sensores="Falha total",
             horario_estimado_chegada=datetime(2026, 10, 14, 10, 0)
@@ -44,7 +44,7 @@ class TestDecisoesPouso(unittest.TestCase):
             nome_modulo="Modulo Emergencia",
             prioridade_pouso=1,
             nivel_combustivel=9,
-            massa=1000,
+            massa=10,
             criticidade_carga="Alta",
             integridade_sensores="Operacional",
             horario_estimado_chegada=datetime(2026, 10, 14, 10, 0)
@@ -75,7 +75,7 @@ class TestDecisoesPouso(unittest.TestCase):
                     nome_modulo="Modulo Limite",
                     prioridade_pouso=1,
                     nivel_combustivel=combustivel,
-                    massa=1000,
+                    massa=10,
                     criticidade_carga="Baixa",
                     integridade_sensores="Operacional",
                     horario_estimado_chegada=datetime(2026, 10, 14, 10, 0)
@@ -110,7 +110,7 @@ class TestDecisoesPouso(unittest.TestCase):
             nome_modulo="Modulo Atmosfera",
             prioridade_pouso=1,
             nivel_combustivel=50,
-            massa=1000,
+            massa=10,
             criticidade_carga="Baixa",
             integridade_sensores="Operacional",
             horario_estimado_chegada=datetime(2026, 10, 14, 10, 0)
@@ -139,7 +139,7 @@ class TestDecisoesPouso(unittest.TestCase):
             nome_modulo="Modulo Area",
             prioridade_pouso=1,
             nivel_combustivel=50,
-            massa=1000,
+            massa=10,
             criticidade_carga="Baixa",
             integridade_sensores="Operacional",
             horario_estimado_chegada=datetime(2026, 10, 14, 10, 0)

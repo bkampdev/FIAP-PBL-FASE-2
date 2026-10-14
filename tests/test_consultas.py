@@ -13,18 +13,18 @@ class TestConsultas(unittest.TestCase):
         chegada = datetime(2026, 10, 14, 10, 0)
 
         self.modulo_a = Modulo(
-            "Modulo A", 3, 50, 1000,
+            "Modulo A", 3, 50, 10,
             "Baixa", "Operacional", chegada
         )
 
         self.modulo_b = Modulo(
-            "Modulo B", 1, 20, 2000,
+            "Modulo B", 1, 20, 20,
             "Alta", "Operacional",
             chegada + timedelta(hours=2)
         )
 
         self.modulo_c = Modulo(
-            "Modulo C", 2, 10, 1500,
+            "Modulo C", 2, 10, 15,
             "Alta", "Operacional",
             chegada + timedelta(hours=1)
         )

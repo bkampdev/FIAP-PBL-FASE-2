@@ -10,7 +10,9 @@ CRITERIO_CHEGADA = 4
 ## Pesquisa Simples - Busca Linear
 
 def modulo_menor_combustivel(lista_de_modulos):
-    """Percorre a lista e retorna o modulo com menor nivel de combustivel."""
+    """Retorna o menor combustível, ou None quando não há módulos."""
+    if not lista_de_modulos:
+        return None
     menor = lista_de_modulos[0]
 
     for i in range(1, len(lista_de_modulos)):
@@ -22,6 +24,8 @@ def modulo_menor_combustivel(lista_de_modulos):
 
 def modulo_maior_prioridade(lista_de_modulos):
     """Retorna o modulo de maior prioridade (1 = mais urgente, ou seja, o menor numero)."""
+    if not lista_de_modulos:
+        return None
     maior = lista_de_modulos[0]
 
     for i in range(1, len(lista_de_modulos)):
@@ -61,6 +65,10 @@ def valor_do_criterio(modulo, criterio):
 
 def ordena_fila(fila, criterio):
     """Reorganiza a fila de pouso pelo criterio escolhido usando Bubble Sort."""
+    # Valida mesmo quando a fila não tem pares para comparar.
+    if criterio not in (CRITERIO_PRIORIDADE, CRITERIO_COMBUSTIVEL,
+                       CRITERIO_MASSA, CRITERIO_CHEGADA):
+        raise ValueError(f"Critério inválido: {criterio}")
     lista = list(fila)
 
     for i in range(0, len(lista)):

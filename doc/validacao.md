@@ -94,8 +94,8 @@ Falhas identificadas nessa execução: 0.
 As funções de busca e ordenação presentes no arquivo
 Consultas.py foram testadas isoladamente.
 
-Na versão analisada, o arquivo main.py importa o módulo
-Consultas, mas não executa suas funções durante a simulação.
+Na versão original analisada, main.py não executa as funções de
+Consultas.py durante a simulação.
 
 Portanto, a integração dessas funcionalidades ao fluxo
 principal ainda não foi demonstrada.
@@ -109,6 +109,8 @@ da lista recebida.
 Caso recebam uma lista vazia, ocorre IndexError.
 
 Essa condição não foi tratada na implementação analisada.
+
+Na integração da issue #5, ambas passaram a retornar `None` para entrada vazia.
 
 ### 6.3. Histórico de decisões
 
@@ -144,3 +146,36 @@ original do sistema.
 
 A documentação das estruturas e dos algoritmos está
 disponível no arquivo doc/anexo_estruturas.md.
+
+## 8. Validação adicional da integração - issue #5
+
+Autoria dos testes e do relatório original: Davi Coninck Cassaro, PR #8.
+A integração acrescentou as verificações abaixo. O registro do executor e
+dos comandos está no checklist de entrega.
+
+- `main.py`: execução protegida por `if __name__ == "__main__"`; inicialização
+  reutilizável e entrada opcional de ambientes fixos. As regras de decisão são preservadas.
+- `Consultas.py`: buscas vazias retornam `None`; critério inválido é rejeitado
+  mesmo quando não há pares para comparar.
+- `exemplos/exemplo_deterministico.py`: buscas, quatro ordenações, fila por
+  prioridade, decisões e consumo LIFO do histórico, todos com os mesmos registros.
+- `tests/test_integracao.py`: seis testes adicionais, incluindo 135 combinações
+  para equivalência com o diagrama, empate estável e entrada vazia.
+
+Comandos executados em 13/10/2026, Python 3.14.7:
+
+```sh
+python3 -m unittest discover -s tests -v
+python3 -m exemplos.exemplo_deterministico
+python3 main.py
+```
+
+Resultado: 21 testes aprovados, zero falhas; exemplo com três pousados, dois
+adiados e um bloqueado. Energia é autorizada por emergência mesmo com tempestade
+e área ocupada; Saúde é bloqueada por falha total mesmo com combustível baixo.
+Essa precedência é uma limitação didática, não uma garantia de segurança física.
+
+Os 15 cenários de teste de Davi foram preservados; as massas fixas foram alinhadas para 10/15/20 toneladas, sem alterar a ordem esperada ou os critérios testados. Foram reproduzidos antes da correção
+o `IndexError` nas buscas vazias e a aceitação indevida do critério 99 em filas
+com zero ou um elemento; os testes adicionais falharam antes e passaram depois.
+A simulação aleatória continua usando a faixa 0–100% de combustível.
