@@ -1,0 +1,4 @@
+# Dependências apenas para gerar e conferir o relatório; núcleo usa biblioteca padrão.
+reportlab==5.0.1
+pymupdf==1.28.2
+pillow==12.3.0

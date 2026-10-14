@@ -175,8 +175,8 @@ if lista_de_modulos[i].criticidade_carga == criticidade:
 As três buscas possuem complexidade de tempo O(n), pois podem
 precisar percorrer todos os módulos da lista.
 
-As funções de menor combustível e maior prioridade pressupõem
-que a lista recebida não esteja vazia.
+Após a integração da issue #5, as funções de menor combustível e maior
+prioridade retornam `None` para uma lista vazia; a busca por criticidade retorna `[]`.
 
 ## 6. Ordenação Bubble Sort
 
@@ -249,18 +249,18 @@ Os testes contemplam:
 Também foram realizados testes das decisões de pouso considerando
 falhas nos sensores, limites de combustível e condições ambientais.
 
-Na execução conjunta, os 15 testes automatizados passaram.
+Na entrega original de Davi, os 15 testes automatizados passaram.
+A integração acrescentou seis testes: 21 testes passam na versão consolidada.
 
 ## 8. Observações sobre a integração
 
 As funções de busca e ordenação estão implementadas no arquivo
 `Consultas.py` e foram validadas individualmente.
 
-Entretanto, na versão analisada do `main.py`, essas funções ainda
-não são chamadas durante a execução principal da simulação.
-
-Assim, os testes comprovam seu funcionamento isolado, mas não
-demonstram sua integração ao fluxo principal.
+O fluxo aleatório de `main.py` mantém a ordem de geração. A integração
+adicionou `exemplos/exemplo_deterministico.py`, que chama as três buscas e
+as quatro ordenações, aplica a fila por prioridade e executa a mesma função
+`main.decide_pouso()` com ambientes fixos. Empates preservam a ordem de entrada.
 
 ## 9. Conclusão
 
@@ -278,3 +278,51 @@ critérios de ordenação.
 Os testes automatizados confirmaram o funcionamento dos
 comportamentos avaliados, preservando a implementação
 original do projeto.
+
+## 10. Exemplo integrado com os seis módulos
+
+Anexo elaborado por Davi Coninck Cassaro (PR #8), complementado com o
+exemplo usado na integração do relatório.
+
+Execute na raiz: `python3 -m exemplos.exemplo_deterministico`.
+
+| Registro | Prioridade | Combustível | Massa (t) | Carga | Chegada | Sensores |
+|---|---|---|---|---|---|---|
+| Transporte | 4 | 50% | 20 | Baixa | 11:00 | Operacional |
+| Comunicação | 3 | 10% | 12 | Média | 08:00 | Falha parcial |
+| Saúde | 1 | 5% | 10 | Alta | 06:00 | Falha total |
+| Energia | 2 | 9% | 15 | Alta | 07:00 | Falha parcial |
+| Segurança | 5 | 90% | 18 | Alta | 12:00 | Operacional |
+| Suprimentos | 3 | 11% | 14 | Média | 09:00 | Operacional |
+
+A chegada usa 12/10/2026. A inclusão por `append()` produz a lista inicial
+na ordem da tabela. Menor combustível e maior prioridade retornam Saúde;
+busca por criticidade Alta retorna Saúde, Energia e Segurança.
+
+| Critério | Ordem retornada |
+|---|---|
+| Prioridade | Saúde, Energia, Comunicação, Suprimentos, Transporte, Segurança |
+| Combustível | Saúde, Energia, Comunicação, Suprimentos, Transporte, Segurança |
+| Massa | Saúde, Comunicação, Suprimentos, Energia, Segurança, Transporte |
+| Chegada | Saúde, Energia, Comunicação, Suprimentos, Transporte, Segurança |
+
+O exemplo aplica a ordenação por prioridade. `popleft()` atende a nova fila
+em FIFO. Comunicação permanece antes de Suprimentos no empate de prioridade 3.
+
+| Retirada | Atmosfera | Área | Resultado | Lista de destino |
+|---|---|---|---|---|
+| Saúde | Estável | Livre | Bloqueado | alerta |
+| Energia | Tempestade | Ocupada | Autorizado (emergência) | pousados |
+| Comunicação | Estável | Livre | Autorizado | pousados |
+| Suprimentos | Estável | Livre | Autorizado | pousados |
+| Transporte | Ventos fortes | Livre | Adiado | espera |
+| Segurança | Estável | Ocupada | Adiado | espera |
+
+Depois das decisões, a fila está vazia; a lista de pousados contém Energia,
+Comunicação e Suprimentos; espera contém Transporte e Segurança; alerta contém
+Saúde. A lista de todos os módulos conserva os seis registros.
+
+O empilhamento registra Saúde, Energia, Comunicação, Suprimentos, Transporte
+e Segurança. O desempilhamento exibe Segurança, Transporte, Suprimentos,
+Comunicação, Energia e Saúde. O exemplo guarda uma cópia antes da exibição e
+mostra a pilha vazia depois. Não é armazenamento persistente.

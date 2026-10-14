@@ -1,6 +1,5 @@
 from collections import deque
 import Dados
-import Modulos
 
 # ---------- Constantes ----------
 COMBUSTIVEL_MINIMO = 10
@@ -17,20 +16,32 @@ condicoes_externas_ambiente = []  # lista: ambiente sorteado em cada tentativa
 
 
 # ---------- Geração dos módulos ----------
-for i in range(0, QUANTIDADE_MODULOS):
-    modulo = Dados.gerar_modulo()
-    modulos_definidos.append(modulo)
-    modulos_fila_de_pouso.append(modulo)   # todos começam na fila
+def inicializar_simulacao(modulos=None):
+    """Reinicia as coleções; aceita dados fixos para exemplos e testes."""
+    for estrutura in (modulos_fila_de_pouso, modulos_pousados,
+                      modulos_em_espera, modulos_em_alerta,
+                      historico_de_decisoes, modulos_definidos,
+                      condicoes_externas_ambiente):
+        estrutura.clear()
+    if modulos is None:
+        modulos = [Dados.gerar_modulo() for _ in range(QUANTIDADE_MODULOS)]
+    for modulo in modulos:
+        modulos_definidos.append(modulo)
+        modulos_fila_de_pouso.append(modulo)  # todos começam na fila
 
 
 # ---------- Decisão de pouso ----------
-def decide_pouso():
+def decide_pouso(ambientes=None):
+    """Atende a fila em FIFO; ambientes fixos seguem a mesma ordem da fila."""
     quantidade_na_fila = len(modulos_fila_de_pouso)
+    if ambientes is not None and len(ambientes) != quantidade_na_fila:
+        raise ValueError("Informe um ambiente por módulo da fila.")
 
     for i in range(0, quantidade_na_fila):
         modulo_atual = modulos_fila_de_pouso.popleft()   # sai o primeiro da fila
 
-        ambiente = Dados.gerar_condicoes_ambiente()      # condições no momento da tentativa
+        ambiente = (Dados.gerar_condicoes_ambiente() if ambientes is None
+                    else ambientes[i])  # condições no momento da tentativa
         condicoes_externas_ambiente.append(ambiente)
 
         # 1. Falha total dos sensores -> Bloqueado
@@ -74,5 +85,7 @@ def exibe_resultado():
 
 
 # ---------- Execução ----------
-decide_pouso()
-exibe_resultado()
+if __name__ == "__main__":
+    inicializar_simulacao()
+    decide_pouso()
+    exibe_resultado()
