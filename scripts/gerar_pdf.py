@@ -15,9 +15,12 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, 
 
 ROOT = Path(__file__).resolve().parents[1]
 DOC = ROOT / "doc"
-INK = colors.HexColor("#202020")
-TEAL = colors.HexColor("#404040")
-GRAY = colors.HexColor("#eeeeee")
+INK = colors.HexColor("#203348")
+ACCENT = colors.HexColor("#a65f3f")
+TEAL = colors.HexColor("#315e70")
+GRAY = colors.HexColor("#e2e8ed")
+LIGHT = colors.HexColor("#f3f6f8")
+MUTED = colors.HexColor("#536474")
 
 
 def fontes():
@@ -130,7 +133,7 @@ def grafico():
     reserva = y0 + 10/100*h
     d.add(Line(x0, reserva, x0+w, reserva, strokeColor=INK, strokeDashArray=[4, 3]))
     texto(d, 354, reserva+5, "Reserva: 10%", 9.5)
-    for c0, cor in ((20, "#b85d36"), (50, "#157d87"), (90, "#375d96")):
+    for c0, cor in ((20, "#a65f3f"), (50, "#287a79"), (90, "#315c89")):
         t = (c0 - 10) / 5
         x = x0 + t/18*w
         color = colors.HexColor(cor)
@@ -150,12 +153,12 @@ def salvar_figura(desenho, nome):
 
 def inline(s):
     s = html.escape(s).replace("–", "-").replace("—", "-")
-    s = re.sub(r"\[([^]]+)\]\((https?://[^)]+)\)", r'<link href="\2" color="#303030"><u>\1</u></link>', s)
+    s = re.sub(r"\[([^]]+)\]\((https?://[^)]+)\)", r'<link href="\2" color="#315e70"><u>\1</u></link>', s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
     s = re.sub(r"`([^`]+)`", r'<font face="Courier" size="8">\1</font>', s)
-    s = re.sub(r"\bC0\b", "C<sub>0</sub>", s)
-    s = re.sub(r"\bCmin\b", "C<sub>min</sub>", s)
-    return re.sub(r"\bt_limite\b", "t<sub>limite</sub>", s)
+    s = re.sub(r"\bC0\b", 'C<sub rise="2" size="8">0</sub>', s)
+    s = re.sub(r"\bCmin\b", 'C<sub rise="2" size="8">min</sub>', s)
+    return re.sub(r"\bt_limite\b", 't<sub rise="2" size="8">limite</sub>', s)
 
 
 def construir():
@@ -167,14 +170,21 @@ def construir():
                             textColor=INK, spaceAfter=7, alignment=TA_LEFT),
         "h1": ParagraphStyle("h1", fontName="Times-Bold", fontSize=22, leading=27,
                              textColor=INK, spaceAfter=15),
-        "h2": ParagraphStyle("h2", fontName="Times-Bold", fontSize=15, leading=19,
-                             textColor=TEAL, spaceAfter=12),
+        "h2": ParagraphStyle("h2", fontName="Helvetica-Bold", fontSize=14.5, leading=18,
+                             textColor=INK, spaceAfter=12),
+        "cover": ParagraphStyle("cover", fontName="Helvetica-Bold", fontSize=36,
+                                leading=40, textColor=INK, spaceAfter=8),
+        "subtitle": ParagraphStyle("subtitle", fontName="Helvetica", fontSize=10,
+                                   leading=14, textColor=TEAL, spaceAfter=14),
         "cell": ParagraphStyle("cell", fontName="Times-Roman", fontSize=9.5, leading=11.5,
                                textColor=INK),
+        "th": ParagraphStyle("th", fontName="Helvetica-Bold", fontSize=8.5,
+                             leading=11.5, textColor=colors.white),
         "caption": ParagraphStyle("caption", fontName="Times-Italic", fontSize=9,
-                                  leading=10, textColor=INK, spaceAfter=8),
+                                  leading=10, textColor=MUTED, spaceAfter=8),
         "code": ParagraphStyle("code", fontName="Courier", fontSize=9, leading=12,
-                               backColor=GRAY, borderPadding=8, spaceAfter=10),
+                               textColor=INK, backColor=LIGHT, borderColor=GRAY,
+                               borderWidth=0.5, borderPadding=8, spaceAfter=10),
         "eq": ParagraphStyle("eq", fontName="Times-Roman", fontSize=11, leading=16,
                              textColor=INK, spaceAfter=7, alignment=TA_CENTER),
     }
@@ -191,6 +201,10 @@ def construir():
             story.append(PageBreak())
         elif s.startswith("# ") or s.startswith("## "):
             nivel = "h1" if s.startswith("# ") else "h2"
+            if nivel == "h1":
+                story.append(Paragraph("MGPEB", estilos["cover"]))
+            if s.startswith("## Relatório técnico"):
+                nivel = "subtitle"
             story.append(Paragraph(inline(s.lstrip("# ")), estilos[nivel]))
         elif re.fullmatch(r"\*\*(C\(t\)|t_limite) = .+\*\*", s):
             story.append(Paragraph(inline(s), estilos["eq"]))
@@ -214,23 +228,27 @@ def construir():
             while i < len(linhas) and linhas[i].startswith("|"):
                 cells = [x.strip() for x in linhas[i].strip().strip("|").split("|")]
                 if not all(re.fullmatch(r":?-+:?", x) for x in cells):
-                    rows.append([Paragraph(inline(x), estilos["cell"]) for x in cells])
+                    estilo = estilos["th"] if not rows else estilos["cell"]
+                    rows.append([Paragraph(inline(x), estilo) for x in cells])
                 i += 1
             n = len(rows[0])
             ratios = {2: [0.32, 0.68], 3: [0.22, 0.39, 0.39],
                       4: [0.25, 0.14, 0.43, 0.18],
-                      7: [0.20, 0.12, 0.09, 0.08, 0.10, 0.11, 0.20]}
+                      7: [0.20, 0.13, 0.10, 0.08, 0.10, 0.12, 0.27]}
             if "Integrante" in rows[0][0].getPlainText():
                 ratios[n] = [0.34, 0.15, 0.51]
+            elif rows[0][0].getPlainText() == "Ordem":
+                ratios[n] = [0.09, 0.57, 0.34]
             table = Table(rows, colWidths=[largura*x for x in ratios.get(n, [1/n]*n)], repeatRows=1)
             table.setStyle(TableStyle([
-                ("BACKGROUND", (0, 0), (-1, 0), GRAY),
+                ("BACKGROUND", (0, 0), (-1, 0), INK),
+                ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, LIGHT]),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
                 ("LEFTPADDING", (0, 0), (-1, -1), 6),
                 ("RIGHTPADDING", (0, 0), (-1, -1), 6),
                 ("TOPPADDING", (0, 0), (-1, -1), 5),
                 ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
-                ("LINEBELOW", (0, 0), (-1, 0), 0.8, TEAL),
+                ("LINEBELOW", (0, 0), (-1, 0), 1.1, ACCENT),
                 ("LINEBELOW", (0, 1), (-1, -1), 0.3, GRAY),
             ]))
             story.extend([table, Spacer(1, 10)])
@@ -246,13 +264,55 @@ def construir():
     def pagina(canvas, documento):
         canvas.setTitle("MGPEB - Relatório técnico | Missão Aurora Siger")
         canvas.setAuthor("Equipe PBL Fase 2 - Lorenzo, Davi, Eduardo, Gabriel e Guilherme")
-        canvas.setStrokeColor(TEAL)
-        canvas.line(44, A4[1]-35, A4[0]-44, A4[1]-35)
-        canvas.setFont("Times-Roman", 8)
+        canvas.saveState()
+        if documento.page == 1:
+            canvas.setFillColor(colors.HexColor("#fbfaf7"))
+            canvas.rect(0, 0, A4[0], A4[1], fill=1, stroke=0)
+            canvas.setFillColor(INK)
+            canvas.rect(0, A4[1]-41, A4[0], 41, fill=1, stroke=0)
+            canvas.setFillColor(ACCENT)
+            canvas.rect(0, A4[1]-44, A4[0], 3, fill=1, stroke=0)
+            canvas.setFillColor(colors.white)
+            canvas.setFont("Helvetica-Bold", 8)
+            canvas.drawString(44, A4[1]-26, "FIAP  /  ATIVIDADE INTEGRADORA")
+            canvas.setFont("Helvetica", 8)
+            canvas.drawRightString(A4[0]-44, A4[1]-26, "FASE 2")
+            # Trajetórias discretas no espaço livre da capa.
+            canvas.setStrokeColor(GRAY)
+            canvas.setLineWidth(0.6)
+            cx, cy = A4[0]-105, 116
+            for rx, ry in ((58, 27), (77, 41), (94, 55)):
+                canvas.ellipse(cx-rx, cy-ry, cx+rx, cy+ry, fill=0, stroke=1)
+            canvas.setFillColor(ACCENT)
+            canvas.circle(cx+58, cy, 3, fill=1, stroke=0)
+            canvas.setFillColor(INK)
+            canvas.circle(cx, cy, 13, fill=1, stroke=0)
+            canvas.setFont("Helvetica", 8)
+            canvas.drawString(44, 122, "AURORA SIGER")
+            canvas.setFont("Helvetica-Bold", 11)
+            canvas.drawString(44, 105, "POUSO E ESTABILIZAÇÃO DE BASE")
+        else:
+            canvas.setStrokeColor(GRAY)
+            canvas.setLineWidth(0.6)
+            canvas.line(44, A4[1]-35, A4[0]-44, A4[1]-35)
+            canvas.setStrokeColor(ACCENT)
+            canvas.setLineWidth(2)
+            canvas.line(44, A4[1]-35, 72, A4[1]-35)
+            canvas.setFont("Helvetica-Bold", 7.5)
+            canvas.setFillColor(INK)
+            canvas.drawString(44, A4[1]-26, "MGPEB  /  MISSÃO AURORA SIGER")
+            canvas.setFont("Helvetica", 7.5)
+            canvas.drawRightString(A4[0]-44, A4[1]-26, "FIAP - FASE 2")
+        canvas.setStrokeColor(GRAY)
+        canvas.setLineWidth(0.5)
+        canvas.line(44, 36, A4[0]-44, 36)
+        canvas.setFont("Helvetica", 7.5)
+        canvas.setFillColor(MUTED)
+        canvas.drawString(44, 23, "Grupo 2 - Relatório técnico")
         canvas.setFillColor(INK)
-        canvas.drawString(44, A4[1]-27, "FIAP - Atividade Integradora - Fase 2")
-        canvas.drawString(44, 25, "Missão Aurora Siger - Grupo 2")
-        canvas.drawRightString(A4[0]-44, 25, str(documento.page))
+        canvas.setFont("Helvetica-Bold", 8)
+        canvas.drawRightString(A4[0]-44, 23, f"{documento.page:02d} / 08")
+        canvas.restoreState()
 
     output = DOC / "relatorio_mgpeb.pdf"
     SimpleDocTemplate(str(output), pagesize=A4, rightMargin=44, leftMargin=44,

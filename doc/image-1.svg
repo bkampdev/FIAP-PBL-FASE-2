@@ -11,46 +11,46 @@
 	<g id="group" transform="scale(1,-1) translate(0,-218)" style="clip-path: url(#clip)">
 		<g transform="">
 			<rect x="0" y="0" width="510" height="218" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
-			<path d="M 45,50.5 L 470,50.5 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="18" y="47.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,95) scale(1,-1)">10</text>
-			<path d="M 45,81.5 L 470,81.5 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="18" y="78.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,157) scale(1,-1)">30</text>
-			<path d="M 45,112.5 L 470,112.5 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="18" y="109.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,219) scale(1,-1)">50</text>
-			<path d="M 45,143.5 L 470,143.5 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="18" y="140.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,281) scale(1,-1)">70</text>
-			<path d="M 45,174.5 L 470,174.5 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="18" y="171.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,343) scale(1,-1)">90</text>
-			<path d="M 45,35 L 45,190 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="41.0" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,40) scale(1,-1)">0</text>
-			<path d="M 92.222222,35 L 92.222222,190 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="88.22222222222223" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,40) scale(1,-1)">2</text>
-			<path d="M 139.444444,35 L 139.444444,190 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="135.44444444444446" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,40) scale(1,-1)">4</text>
-			<path d="M 233.888889,35 L 233.888889,190 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="229.88888888888889" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,40) scale(1,-1)">8</text>
-			<path d="M 328.333333,35 L 328.333333,190 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="324.3333333333333" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,40) scale(1,-1)">12</text>
-			<path d="M 422.777778,35 L 422.777778,190 Z" style="stroke: rgb(93%,93%,93%); stroke-linecap: butt; stroke-width: 1;"/>
-			<text x="418.77777777777777" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,40) scale(1,-1)">16</text>
-			<path d="M 45,190 L 45,35 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
-			<path d="M 45,35 L 470,35 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1.2;"/>
-			<text x="8" y="203" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,406) scale(1,-1)">Combustível (%)</text>
-			<text x="356" y="3" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,6) scale(1,-1)">Espera (horas)</text>
-			<path d="M 45,50.5 L 470,50.5 Z" style="stroke: rgb(12%,12%,12%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 3;"/>
-			<text x="354" y="55.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,12%,12%); stroke:none;" transform="translate(0,111) scale(1,-1)">Reserva: 10%</text>
-			<path d="M 45,66 L 92.222222,50.5 Z" style="stroke: rgb(72%,36%,21%); stroke-linecap: butt; stroke-width: 2;"/>
-			<circle cx="92.22222222222223" cy="50.5" r="3" style="stroke: rgb(72%,36%,21%); stroke-linecap: butt; stroke-width: 1; fill: rgb(72%,36%,21%); fill-rule: evenodd;"/>
-			<text x="50" y="70.0" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(72%,36%,21%); stroke:none;" transform="translate(0,140) scale(1,-1)">C(0)=20%</text>
-			<text x="82.22222222222223" y="36.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(72%,36%,21%); stroke:none;" transform="translate(0,73) scale(1,-1)">2 h</text>
-			<path d="M 45,112.5 L 233.888889,50.5 Z" style="stroke: rgb(8%,49%,52%); stroke-linecap: butt; stroke-width: 2;"/>
-			<circle cx="233.88888888888889" cy="50.5" r="3" style="stroke: rgb(8%,49%,52%); stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,52%); fill-rule: evenodd;"/>
-			<text x="50" y="116.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(8%,49%,52%); stroke:none;" transform="translate(0,233) scale(1,-1)">C(0)=50%</text>
-			<text x="223.88888888888889" y="36.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(8%,49%,52%); stroke:none;" transform="translate(0,73) scale(1,-1)">8 h</text>
-			<path d="M 45,174.5 L 422.777778,50.5 Z" style="stroke: rgb(21%,36%,58%); stroke-linecap: butt; stroke-width: 2;"/>
-			<circle cx="422.77777777777777" cy="50.5" r="3" style="stroke: rgb(21%,36%,58%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,36%,58%); fill-rule: evenodd;"/>
-			<text x="50" y="178.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(21%,36%,58%); stroke:none;" transform="translate(0,357) scale(1,-1)">C(0)=90%</text>
-			<text x="412.77777777777777" y="36.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(21%,36%,58%); stroke:none;" transform="translate(0,73) scale(1,-1)">16 h</text>
+			<path d="M 45,50.5 L 470,50.5 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="18" y="47.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,95) scale(1,-1)">10</text>
+			<path d="M 45,81.5 L 470,81.5 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="18" y="78.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,157) scale(1,-1)">30</text>
+			<path d="M 45,112.5 L 470,112.5 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="18" y="109.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,219) scale(1,-1)">50</text>
+			<path d="M 45,143.5 L 470,143.5 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="18" y="140.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,281) scale(1,-1)">70</text>
+			<path d="M 45,174.5 L 470,174.5 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="18" y="171.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,343) scale(1,-1)">90</text>
+			<path d="M 45,35 L 45,190 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="41.0" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,40) scale(1,-1)">0</text>
+			<path d="M 92.222222,35 L 92.222222,190 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="88.22222222222223" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,40) scale(1,-1)">2</text>
+			<path d="M 139.444444,35 L 139.444444,190 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="135.44444444444446" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,40) scale(1,-1)">4</text>
+			<path d="M 233.888889,35 L 233.888889,190 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="229.88888888888889" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,40) scale(1,-1)">8</text>
+			<path d="M 328.333333,35 L 328.333333,190 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="324.3333333333333" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,40) scale(1,-1)">12</text>
+			<path d="M 422.777778,35 L 422.777778,190 Z" style="stroke: rgb(88%,90%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="418.77777777777777" y="20" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,40) scale(1,-1)">16</text>
+			<path d="M 45,190 L 45,35 Z" style="stroke: rgb(12%,20%,28%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 45,35 L 470,35 Z" style="stroke: rgb(12%,20%,28%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<text x="8" y="203" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,406) scale(1,-1)">Combustível (%)</text>
+			<text x="356" y="3" style="font-family: Times-Roman; font-size: 10px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,6) scale(1,-1)">Espera (horas)</text>
+			<path d="M 45,50.5 L 470,50.5 Z" style="stroke: rgb(12%,20%,28%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 4, 3;"/>
+			<text x="354" y="55.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(12%,20%,28%); stroke:none;" transform="translate(0,111) scale(1,-1)">Reserva: 10%</text>
+			<path d="M 45,66 L 92.222222,50.5 Z" style="stroke: rgb(65%,37%,24%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="92.22222222222223" cy="50.5" r="3" style="stroke: rgb(65%,37%,24%); stroke-linecap: butt; stroke-width: 1; fill: rgb(65%,37%,24%); fill-rule: evenodd;"/>
+			<text x="50" y="70.0" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(65%,37%,24%); stroke:none;" transform="translate(0,140) scale(1,-1)">C(0)=20%</text>
+			<text x="82.22222222222223" y="36.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(65%,37%,24%); stroke:none;" transform="translate(0,73) scale(1,-1)">2 h</text>
+			<path d="M 45,112.5 L 233.888889,50.5 Z" style="stroke: rgb(15%,47%,47%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="233.88888888888889" cy="50.5" r="3" style="stroke: rgb(15%,47%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,47%,47%); fill-rule: evenodd;"/>
+			<text x="50" y="116.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(15%,47%,47%); stroke:none;" transform="translate(0,233) scale(1,-1)">C(0)=50%</text>
+			<text x="223.88888888888889" y="36.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(15%,47%,47%); stroke:none;" transform="translate(0,73) scale(1,-1)">8 h</text>
+			<path d="M 45,174.5 L 422.777778,50.5 Z" style="stroke: rgb(19%,36%,53%); stroke-linecap: butt; stroke-width: 2;"/>
+			<circle cx="422.77777777777777" cy="50.5" r="3" style="stroke: rgb(19%,36%,53%); stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,36%,53%); fill-rule: evenodd;"/>
+			<text x="50" y="178.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(19%,36%,53%); stroke:none;" transform="translate(0,357) scale(1,-1)">C(0)=90%</text>
+			<text x="412.77777777777777" y="36.5" style="font-family: Times-Roman; font-size: 9.5px;fill: rgb(19%,36%,53%); stroke:none;" transform="translate(0,73) scale(1,-1)">16 h</text>
 		</g>
 	</g>
 </svg>
