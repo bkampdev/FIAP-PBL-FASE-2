@@ -5,7 +5,7 @@ from datetime import datetime
 @dataclass
 class Modulo:
     nome_modulo : str
-    prioridade_pouso: str
+    prioridade_pouso: int
     nivel_combustivel: int
     massa: int
     criticidade_carga: str
